@@ -28,13 +28,18 @@ public class MemberMapperTests {
 	
 	
 	
-	/*
-	 * @Test public void testInsert() { MemberVO vo = new MemberVO();
-	 * vo.setUserid("may123"); vo.setUsername("윤미혜"); vo.setUserpw("1234");
-	 * vo.setEmail("cloud123@naver.com"); vo.setGender("남");
-	 * 
-	 * memberMapper.insertMember(vo); }
-	 */
+
+	  /*@Test
+	  public void testInsert() {
+		  MemberVO vo = new MemberVO();
+		  vo.setUserid("may123");
+		  vo.setUsername("윤미혜"); 
+		  vo.setUserpw("1234");
+		  vo.setEmail("cloud123@naver.com");
+		  vo.setGender("남");
+	  
+	  memberMapper.insertMember(vo); }*/
+			 
 	 
 	 
 	
@@ -43,8 +48,6 @@ public class MemberMapperTests {
 		MemberVO vo = memberMapper.read("sky123");
 		log.info(vo);
 	}
-	
-	
 	
 	
 	  @Test public void testDelete() { MemberVO vo = new MemberVO();

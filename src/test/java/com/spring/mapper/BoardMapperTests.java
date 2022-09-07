@@ -36,25 +36,29 @@ public class BoardMapperTests {
 	
 	@Test
 	public void testRead() {
-		BoardVO vo = boardMapper.read(4L);
-		log.info(vo);
+		BoardVO board = boardMapper.read(1);
+		log.info(board);
 	}
 	
-	@Test
+	/*@Test
 	public void testDelete() {
-		int count = boardMapper.delete(4L);
+		BoardVO vo = new BoardVO();
+		vo.setBno(2);
 		
-		log.info("count" + count);
-	}
+		boardMapper.delete(vo);
+		log.info(vo);
+	}*/
 	
 	@Test
 	public void testUpdate() {
 		BoardVO vo = new BoardVO();
-		vo.setBno(1L);
+		vo.setBno(3);
 		vo.setTitle("updated Title");
 		vo.setContent("updated content");
 		vo.setWriter("update user00");
 		
-		log.info("count" + boardMapper.update(vo));
+		boardMapper.update(vo);
+		
+		log.info(vo);
 	}
 }

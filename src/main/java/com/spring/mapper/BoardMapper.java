@@ -6,13 +6,13 @@ import com.spring.domain.BoardVO;
 
 public interface BoardMapper {
 	
-	List<BoardVO> getList();
+	public List<BoardVO> getList();
 
-	void insert(BoardVO board);
+	public void insert(BoardVO board);
 	
-	BoardVO read(Long bno);
+	public BoardVO read(int bno);
 	
-	int delete(Long bno);
+	public void delete(BoardVO board);
 	
-	int update(BoardVO board);
+	public void update(BoardVO board);
 }
