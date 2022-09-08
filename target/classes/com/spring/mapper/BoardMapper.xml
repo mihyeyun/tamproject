@@ -30,6 +30,7 @@
 	<![CDATA[
 		select * from tam_board where bno > 0 
 		]]>
+		select * from tam_board order by bno desc
 	</select>
 
 	<insert id="insert">
