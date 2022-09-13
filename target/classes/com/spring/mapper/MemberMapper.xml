@@ -10,7 +10,7 @@
 	</select>
 	
 	<insert id="insertMember">
-		INSERT INTO tam_member (userid, username, userpw, email, gender) values 
+		INSERT INTO tam_member(userid, username, userpw, email, gender) values 
 		(#{userid}, #{username}, #{userpw}, #{email}, #{gender})
 	</insert>
 	

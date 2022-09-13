@@ -7,6 +7,7 @@
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
+	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
       <property name="driverClassName"
@@ -26,6 +27,7 @@
 	</bean>
 	
 	<mybatis-spring:scan base-package="com.spring.mapper"/>
+
 	
 	<context:component-scan base-package="com.spring"></context:component-scan>
 	

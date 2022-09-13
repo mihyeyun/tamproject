@@ -7,7 +7,7 @@
 
 <div class="row">
   <div class="col-lg-12">
-    <h1 class="page-header">Board Modify/Delete</h1>
+    <h1 class="page-header">member Modify/Delete</h1>
   </div>
   <!-- /.col-lg-12 -->
 </div>
@@ -23,20 +23,36 @@
       
 		<form>
           <div class="form-group">
-          <label>Bno</label> <input class="form-control" name='bno'
-            value='<c:out value="${board.bno }"/>' readonly="readonly">
+          <label>userid</label> <input class="form-control" name='userid'
+            value='<c:out value="${member.userid}"/>' readonly="readonly">
         </div>
 
         <div class="form-group">
-          <label>Title</label> <input class="form-control" name='title'
-            value='<c:out value="${board.title }"/>' >
+          <label>username</label> <input class="form-control" name='username'
+            value='<c:out value="${member.username}"/>' >
+        </div>
+        
+        <div class="form-group">
+          <label>userpw</label> <input class="form-control" name='userpw'
+            value='<c:out value="${member.userpw}"/>' >
+        </div>
+        
+        <div class="form-group">
+          <label>email</label> <input class="form-control" name='email'
+            value='<c:out value="${member.email}"/>' >
+        </div>
+        
+    	<%--<div class="form-group">
+          <label>birth</label> <input class="form-control" name='birth'
+            value='<c:out value="${member.birth}"/>' >
+        </div> --%>
+        
+        <div class="form-group">
+          <label>gender</label> <input class="form-control" name='gender'
+            value='<c:out value="${member.gender}"/>' >
         </div>
 
-        <div class="form-group">
-          <label>Text area</label>
-          <textarea class="form-control" rows="3" name='content'
-           ><c:out value="${board.content}" /></textarea>
-        </div>
+        
 
         <div class="form-group">
           <label>Writer</label> <input class="form-control" name='writer'
@@ -58,7 +74,7 @@
 </form> --%>
 
 
-<%-- <form id='operForm' action="/board/modify" method="get">
+<%-- <form id='operForm' action="/member/modify" method="get">
   <input type='hidden' id='bno' name='bno' value='<c:out value="${board.bno}"/>'>
   <input type='hidden' name='pageNum' value='<c:out value="${cri.pageNum}"/>'>
   <input type='hidden' name='amount' value='<c:out value="${cri.amount}"/>'>
@@ -94,14 +110,14 @@ $(document).ready(function() {
 		
 		if(operation == 'list'){
 			
-			self.location = "/board/list";
+			self.location = "/member/list";
 			
 		}else if(operation == 'remove'){
-			formObj.attr("action", "/board/remove")
+			formObj.attr("action", "/member/remove")
 				   .attr("method", "post");
 			formObj.submit();
 		}else if(operation == 'modify'){
-			formObj.attr("action", "/board/modify")
+			formObj.attr("action", "/member/modify")
 				   .attr("method", "post");
 			formObj.submit();
 		}
