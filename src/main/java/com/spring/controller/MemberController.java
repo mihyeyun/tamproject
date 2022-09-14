@@ -30,6 +30,7 @@ import lombok.extern.log4j.Log4j;
 @Controller
 public class MemberController {
 	
+	@Autowired
 	private MemberService service;
 	
 	@GetMapping("list")
@@ -46,7 +47,7 @@ public class MemberController {
 	 - 매개변수 다를 경우 코드 주의	 
 	 */
 	
-	@GetMapping("/register")
+	/*@GetMapping("/register")
 	public void register(MemberVO member) {
 	}
 	
@@ -56,6 +57,25 @@ public class MemberController {
 		service.regsiter(member);
 		rttr.addFlashAttribute("result", member.getUserid());
 		return "redirect:/member/list";
+	}*/
+	
+	@RequestMapping(value="/register", method=RequestMethod.GET)
+	public void register() {
+		log.info("회원가입 페이지 진입");
+	}
+	
+	@RequestMapping(value="/register", method=RequestMethod.POST)
+	public String register(MemberVO member) {
+		log.info("register 진입");
+		//회원 가입 서비스 실행
+		service.regsiter(member);
+		log.info("register service 성공");
+		return "redirect:/member/list";
+	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public void login() {
+		log.info("로그인페이지 진입");
 	}
 	
 	

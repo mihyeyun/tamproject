@@ -19,31 +19,31 @@ public class MemberMapperTests {
 	@Autowired
 	private MemberMapper memberMapper;
 	
-	@Test
+	/*@Test
 	public void testGetMemberList() {
 		log.info("----------------");
 		log.info(memberMapper.getMemberList());
-	}
+	}*/
 
 	
 	
 	
 
-	  /*@Test
+	 @Test
 	  public void testInsert() {
 		  MemberVO vo = new MemberVO();
-		  vo.setUserid("may123");
+		  vo.setUserid("may12345");
 		  vo.setUsername("윤미혜"); 
 		  vo.setUserpw("1234");
 		  vo.setEmail("cloud123@naver.com");
 		  vo.setGender("남");
 	  
-	  memberMapper.insertMember(vo); }*/
+	  memberMapper.insertMember(vo); }
 			 
 	 
 	 
 	
-	@Test
+	/*@Test
 	public void testRead() {
 		MemberVO vo = memberMapper.read("sky123");
 		log.info(vo);
@@ -51,7 +51,7 @@ public class MemberMapperTests {
 	
 	
 	  @Test public void testDelete() { MemberVO vo = new MemberVO();
-	  vo.setUserid("may123");
+	  vo.setUserid("may");
 	  
 	  memberMapper.deleteMember(vo);
 	  
@@ -61,11 +61,11 @@ public class MemberMapperTests {
 	  public void testUpdate() {
 		  MemberVO vo = new MemberVO();
 			 vo.setUserid("sky123");
-			 vo.setUsername("홍성훈");
+			 vo.setUsername("김성훈");
 			 vo.setUserpw("1234");
 			 vo.setEmail("cloud123@naver.com");
 			 vo.setGender("남");
 			  
 			 memberMapper.updateMember(vo); 
-	  }  
+	  }  */
 }

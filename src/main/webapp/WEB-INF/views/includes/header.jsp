@@ -68,6 +68,8 @@
                         </li>
                         <li><a href="/member/register"><i class="fa fa-gear fa-fw"></i> member_join</a>
                         </li>
+                        <li><a href="/member/login"><i class="fa fa-gear fa-fw"></i> member_login</a>
+                        </li>
                         <li class="divider"></li>
                         <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>

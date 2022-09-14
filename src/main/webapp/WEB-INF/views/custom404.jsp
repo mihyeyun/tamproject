@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Code Error!</h1>
-	<p><c:out value="${exception}"></c:out></p>
+	<h1>404 Error!</h1>
 </body>
 </html>
