@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="./includes/header.jsp" %>
+<%@ include file="../includes/header.jsp" %>
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">index</h1>
@@ -13,7 +13,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            DataTables Advanced Tables
+                           this is admin page
                             <button type="button" id="regBtn" class="btn btn-xs pull-right">register new board</button>
                         </div>
                         <!-- /.panel-heading -->
@@ -33,4 +33,4 @@
             </div>
           	<!-- row -->
           	  
-     <%@ include file="./includes/footer.jsp" %>
+     <%@ include file="../includes/footer.jsp" %>

@@ -16,4 +16,9 @@ public interface MemberService {
 	
 	public void modify(MemberVO member);
 
+	//아이디 중복체크
+	public int idCheck(String userid);
+	
+	//로그인
+	public MemberVO memberLogin(MemberVO member);
 }

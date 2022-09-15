@@ -47,6 +47,18 @@ public class MemberServiceImpl implements MemberService {
 		mapper.updateMember(member);
 	}
 
+	@Override
+	public int idCheck(String userid) {
+		return mapper.idCheck(userid);
+	}
+
+	//로그인
+	@Override
+	public MemberVO memberLogin(MemberVO member) {
+		
+		return mapper.memberLogin(member);
+	}
+
 	
 
 }

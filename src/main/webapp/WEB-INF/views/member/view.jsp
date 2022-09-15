@@ -42,10 +42,10 @@
             value='<c:out value="${member.email}"/>' readonly="readonly" >
         </div>
         
-       <%--  <div class="form-group">
+        <div class="form-group">
           <label>birth</label> <input class="form-control" name='birth'
             value='<c:out value="${member.birth}"/>' readonly="readonly" >
-        </div> --%>
+        </div>
         
         <div class="form-group">
           <label>gender</label> <input class="form-control" name='gender'

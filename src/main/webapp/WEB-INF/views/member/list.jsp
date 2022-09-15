@@ -38,7 +38,7 @@
                                         <td>${member.username}</td>
                                         <td>${member.userpw}</td>
                                         <td>${member.email}</td>
-                                         <td><fmt:formatDate pattern="yyyy-MM-dd" value="${member.birth}" /></td>
+                                        <td>${member.birth}</td>
                                         <td>${member.gender}</td>
                                     </tr>
                                  </c:forEach>
