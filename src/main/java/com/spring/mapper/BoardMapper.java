@@ -7,9 +7,9 @@ import com.spring.domain.Criteria;
 
 public interface BoardMapper {
 
-	public List<BoardVO> getList();
+	public List<BoardVO> getList();// 글 목록 보
 
-	public List<BoardVO> getListWithPaging(Criteria cri);
+	public List<BoardVO> getListWithPaging(Criteria cri); //목록 페이
 
 	public void insert(BoardVO board);
 

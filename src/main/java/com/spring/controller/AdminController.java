@@ -19,6 +19,8 @@ public class AdminController {
     public void adminMainGET() throws Exception{
         
       log.info("관리자페이지 이동");
+      
+      //return "redirect:/admin/index";
         
     }
 }
