@@ -108,22 +108,56 @@ public class MemberController {
 		log.info("view");
 	}
 	 
-	@GetMapping("/modify") 
-	public void modify() { 
-		log.info("modify");
+	
+	/*@RequestMapping(value="modify", method=RequestMethod.GET)
+	public void modify() {
+		log.info("modify 페이지 진입");
 	}
 	
-	
-	@PostMapping("/modify")
-	public String modify(MemberVO member, RedirectAttributes rttr) {
+	@RequestMapping(value="modify", method=RequestMethod.POST)
+	public String modify(MemberVO member) {
+		log.info("modify 진입");
+		//회원 가입 서비스 실행
 		service.modify(member);
+		log.info("modify service 성공");
 		return "redirect:/member/list";
-	}
+	} */
 	
-	@PostMapping("/remove")
-	public String remove(MemberVO member, RedirectAttributes rttr) {
+  @GetMapping("/modify")
+    public void boardModifyGET(String userid, Model model) {
+        
+        model.addAttribute("member", service.get(userid));
+        
+    }
+	
+    /* 페이지 수정 */
+    @PostMapping("/modify")
+    public String memberModifyPOST(MemberVO member, RedirectAttributes rttr) {
+        
+        service.modify(member);
+        
+        rttr.addFlashAttribute("result", "modify success");
+        
+        return "redirect:/member/list";
+        
+    }
+	
+
+    /* 페이지 삭제 */
+	/* @RequestMapping(value="/remove", method=RequestMethod.POST)
+    public String memberDeletePOST(MemberVO member) {
+        
+        service.remove(member);
+        
+        
+        return "redirect:/member/list";
+    }*/
+	
+	@PostMapping("/member/remove")
+	public String remove(MemberVO member) {
+		log.info("remove 진입 성공");
 		service.remove(member);
-		rttr.addFlashAttribute("result", member);	
+		log.info("remove 수정 성공");
 		return "redirect:/member/list";
 	}
 }

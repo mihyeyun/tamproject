@@ -25,7 +25,7 @@
 	</delete>
 	
 	<update id="updateMember">
-		UPDATE tam_member SET username = #{username}, userpw = #{userpw}, email = #{email}, birth = #{birth}, gender = #{gender} 
+		UPDATE tam_member SET username = #{username}, userpw = #{userpw}, email = #{email}, birth = #{birth}, gender = #{gender}, adminCk = #{adminCk} 
 		WHERE userid = #{userid}
 	</update>
 

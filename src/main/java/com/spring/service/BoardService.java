@@ -7,6 +7,7 @@ import com.spring.domain.Criteria;
 
 public interface BoardService {
 
+
 	public void register(BoardVO board);
 
 	public BoardVO get(Long bno);
@@ -15,9 +16,9 @@ public interface BoardService {
 
 	public boolean remove(Long bno);
 
-	public List<BoardVO> getList();
+	// public List<BoardVO> getList();
 
-	public List<BoardVO> getList(Criteria cri); //목록 페이지 
+	public List<BoardVO> getList(Criteria cri);
 
 	//추가
 	public int getTotal(Criteria cri);

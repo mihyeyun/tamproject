@@ -34,7 +34,7 @@
                                 <tbody>
                                 <c:forEach items="${m_list}" var="member">
                                     <tr class="odd gradeX">
-                                        <td><a href="/member/modify?userid=<c:out value="${member.userid}" />"><c:out value="${member.userid}" /></a></td>
+                                        <td><a href="/member/modify?userid=<c:out value="${member.userid}" />"> <c:out value="${member.userid}" /></a></td>
                                         <td>${member.username}</td>
                                         <td>${member.userpw}</td>
                                         <td>${member.email}</td>
@@ -55,8 +55,8 @@
             </div>
           	<!-- row -->
           	
-          	<!-- 모달창 -->
-			<div id="myModal" class="modal" tabindex="-1" role="dialog" >
+         <!-- 모달창 -->
+		 <div id="myModal" class="modal" tabindex="-1" role="dialog" >
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
@@ -75,7 +75,7 @@
 			    </div>
 			  </div>
 			</div>
-          	
+			
           <script>
           	$(document).ready(function(){
           		

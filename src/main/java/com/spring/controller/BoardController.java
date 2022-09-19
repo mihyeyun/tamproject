@@ -28,17 +28,17 @@ public class BoardController {
 	private BoardService service;
 
 	@GetMapping("/register")
-	public void registerGET() {
+	public void register() {
 
 	}
 
-
-	/*@GetMapping("/list")
-	public void list(Model model) {
-	
-	log.info("list");
-	model.addAttribute("list", service.getList());
-	}*/
+	// @GetMapping("/list")
+	// public void list(Model model) {
+	//
+	// log.info("list");
+	// model.addAttribute("list", service.getList());
+	//
+	// }
 
 	// @GetMapping("/list")
 	// public void list(Criteria cri, Model model) {
@@ -53,7 +53,7 @@ public class BoardController {
 
 		log.info("list: " + cri);
 		model.addAttribute("list", service.getList(cri));
-		model.addAttribute("pageMaker", new PageDTO(cri, 123));
+		// model.addAttribute("pageMaker", new PageDTO(cri, 123));
 
 		int total = service.getTotal(cri);
 
@@ -62,7 +62,7 @@ public class BoardController {
 		model.addAttribute("pageMaker", new PageDTO(cri, total));
 
 	}
-	
+
 	@PostMapping("/register")
 	public String register(BoardVO board, RedirectAttributes rttr) {
 

@@ -34,9 +34,17 @@ public class MemberControllerTests {
 	@Before
 	public void setup() {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
-	}
+	} 
 	
 	@Test
+	public void testRemove() throws Exception {
+		// 삭제전 데이터베이스에 게시물 번호 확인할 것
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/member/remove").param("userid", "test2")).andReturn()
+				.getModelAndView().getViewName();
+
+		log.info(resultPage);
+	}
+	/* @Test
 	public void testList() throws Exception{
 		log.info(
 			mockMvc.perform(MockMvcRequestBuilders.get("/member/list"))
@@ -59,5 +67,5 @@ public class MemberControllerTests {
 				.andReturn()
 				.getModelAndView()
 				.getModelMap());
-	}
+	}*/
 }

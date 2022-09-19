@@ -19,16 +19,16 @@ public class MemberMapperTests {
 	@Autowired
 	private MemberMapper memberMapper;
 	
-	/*@Test
+	/* @Test
 	public void testGetMemberList() {
 		log.info("----------------");
 		log.info(memberMapper.getMemberList());
-	}*/
+	}
 
 	
 	
 	
-	/*//회원가입 테스트
+	//회원가입 테스트
 	 @Test
 	  public void testInsert() {
 		  MemberVO vo = new MemberVO();
@@ -39,19 +39,19 @@ public class MemberMapperTests {
 		  vo.setBirth("1995-12-30");
 		  vo.setGender("남");
 	  
-	  memberMapper.insertMember(vo); }*/
+	 memberMapper.insertMember(vo); }
 		
 	//아이디 중복 체크
-	/* @Test
+	@Test
 	 public void memberIdChk() {
 		 String id = "sky123";
 		 String id2 = "test123";
 		 memberMapper.idCheck(id);
 		 memberMapper.idCheck(id2);
-	 }*/
+	 }
 	
 	//로그인 쿼리 mapper 메서드 테스트
-	@Test
+	 @Test
 	public void memberLogin() {
 		MemberVO member = new MemberVO();
 		
@@ -63,36 +63,46 @@ public class MemberMapperTests {
 		/*member.setUserid("sky123456");
 		member.setUserpw("1234aaaa");*/
 		
-		memberMapper.memberLogin(member);
-		System.out.println("결과값 : " + memberMapper.memberLogin(member));
+		/* memberMapper.memberLogin(member);
+		System.out.println("결과값 : " + memberMapper.memberLogin(member)); 
 		
-	}
+	} */
 	
 	 
 	
-	/*@Test
+	 /* @Test
 	public void testRead() {
 		MemberVO vo = memberMapper.read("sky123");
 		log.info(vo);
-	}
+	} */
 	
 	
-	  @Test public void testDelete() { MemberVO vo = new MemberVO();
-	  vo.setUserid("may");
-	  
-	  memberMapper.deleteMember(vo);
+	  @Test
+	  public void testDelete(){
+		  
+		  MemberVO vo = new MemberVO();
+		  vo.setUserid("test");
+		  
+		  memberMapper.deleteMember(vo);
+	  }
+	
 	  
 	  }
 	  
-	  @Test
+	 
+	  
+	 /* @Test
 	  public void testUpdate() {
 		  MemberVO vo = new MemberVO();
-			 vo.setUserid("sky123");
-			 vo.setUsername("김성훈");
+			 vo.setUserid("test");
+			 vo.setUsername("김훈");
 			 vo.setUserpw("1234");
 			 vo.setEmail("cloud123@naver.com");
+			 vo.setBirth("2012-12-12");
 			 vo.setGender("남");
+			 vo.setAdminCk(0);
 			  
 			 memberMapper.updateMember(vo); 
-	  }  */
-}
+	  } */
+	  
+
