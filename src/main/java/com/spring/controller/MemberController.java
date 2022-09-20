@@ -124,7 +124,7 @@ public class MemberController {
 	} */
 	
   @GetMapping("/modify")
-    public void boardModifyGET(String userid, Model model) {
+    public void memberModifyGET(String userid, Model model) {
         
         model.addAttribute("member", service.get(userid));
         
@@ -153,7 +153,7 @@ public class MemberController {
         return "redirect:/member/list";
     }*/
 	
-	@PostMapping("/member/remove")
+	@PostMapping("/remove")
 	public String remove(MemberVO member) {
 		log.info("remove 진입 성공");
 		service.remove(member);

@@ -13,8 +13,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            DataTables Advanced Tables
-                            <button type="button" id="regBtn" class="btn btn-xs pull-right">register new board</button>
+                            index page                  
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">

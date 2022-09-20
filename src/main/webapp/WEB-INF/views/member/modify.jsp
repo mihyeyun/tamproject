@@ -89,7 +89,7 @@
 
 	</form>
 	<form id ="infoForm" action="/member/modify" method="get">
-		<input type="hidden" id="userid" name="userid" value='<c:out value="pageInfo.userid" />'>
+		<input type="hidden" id="userid" name="userid" value='<c:out value="${member.userid}" />'>
 	</form>
       </div>
       <!--  end panel-body -->
@@ -105,7 +105,7 @@
 $(document).ready(function() {
 
 
-	/*  var formObj = $("form");
+	/*var formObj = $("form");
 
 	  $('button').on("click", function(e){
 	    
@@ -115,7 +115,7 @@ $(document).ready(function() {
 	    
 	    console.log(operation);
 	    
-	    if(operation === 'remove'){
+	     if(operation === 'remove'){
 	      formObj.attr("action", "/member/remove");
 	      
 	    }else if(operation === 'modify'){
@@ -127,10 +127,10 @@ $(document).ready(function() {
 	    }
 	    
 	    formObj.submit();
-	  }); */
+	  });  */
 	  
 	   let form = $("#infoForm");        // 페이지 이동 form(리스트 페이지 이동, 조회 페이지 이동)
-	   let mForm = $("#modifyForm");    // 페이지 데이터 수정 from
+	   let mForm = $("#modifyForm");    // 페이지 데이터 수정 from */
 	    
 	    /* 목록 페이지 이동 버튼 */
 	    $("#list_btn").on("click", function(e){
@@ -140,20 +140,20 @@ $(document).ready(function() {
 	    });
 	    
 	    /* 수정 하기 버튼 */
-	    $("#modify_btn").on("click", function(e){
+	   $("#modify_btn").on("click", function(e){
 	        mForm.submit();
-	    });
+	    }); 
 	    
+	    
+	   /* 취소 버튼 */
+	   $("#remove_btn").on("click", function(e){
+	      form.attr("action", "/member/remove");
+	      form.attr("method", "post");
+	      form.submit();
+	  });    
+	   
 	  
-});
-
-/* 취소 버튼 */
-$("#cancel_btn").on("click", function(e){
-    form.attr("action", "/member/remove");
-    form.attr("method", "post");
-    form.submit();
-});    
-
+}); 
 </script>
 
 

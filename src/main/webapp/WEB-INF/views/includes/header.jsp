@@ -76,19 +76,19 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                    	<span><c:out value="${member.username }" /> Welcome!</span>
-                        <li><a href="/member/list"><i class="fa fa-user fa-fw"></i> member_list</a>
-                        </li>
-                        <li><a href="/member/register"><i class="fa fa-gear fa-fw"></i> member_join</a>
-                        </li>
-                        <li><a href="/member/login"><i class="fa fa-gear fa-fw"></i> member_login</a>
-                        </li>
-                        <li class="divider"></li>
+                    	<span><c:out value="${member.username }" /> Welcome!</span>   
                         <li><a href="/member/logout.do"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                         
                         <c:if test="${member.adminCk == 1 }">
                         		<li><a href="/admin/index">this page is only for admin</a></li>
+                        		  <li><a href="/member/list"><i class="fa fa-user fa-fw"></i> member_list</a>
+		                        </li>
+		                        <li><a href="/member/register"><i class="fa fa-gear fa-fw"></i> member_join</a>
+		                        </li>
+		                        <li><a href="/member/login"><i class="fa fa-gear fa-fw"></i> member_login</a>
+		                        </li>
+		                        <li class="divider"></li>
                        	</c:if>
                                          
                     </ul>
